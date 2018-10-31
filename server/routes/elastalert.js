@@ -3,7 +3,7 @@ export default function (server, options) {
 
   // Route every request to the ElastAlert API
   server.route({
-    path: '/api/elastalert/{path*}',
+    path: '{path*}',
     method: ['GET', 'POST', 'DELETE'],
     handler: {
       proxy: {
